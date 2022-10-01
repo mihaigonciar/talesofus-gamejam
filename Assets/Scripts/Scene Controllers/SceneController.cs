@@ -26,6 +26,11 @@ public class SceneController : MonoBehaviour
 
             switch (sceneName)
             {
+                case nameof(Scenes.S0_Transition):
+                    {
+                        text.text = PromptSource.Transition_S0_Text;
+                        break;
+                    }
                 case nameof(Scenes.S2_Transition):
                     {
                         text.text = PromptSource.Transition_S2_Text;
@@ -80,4 +85,5 @@ public enum Scenes
     S9_Transition,
     S10_Spell3,
     S11_Transition,
+    S0_Transition,
 }
