@@ -6,6 +6,42 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MainMenu.unity
+    guid: 940029d25710b6c45bd5308d1fe59148
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S1_Intro.unity
+    guid: a3e8c7faf94df894aa9f78b662c8891f
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S2_Transition.unity
+    guid: 1b8226dd63f573c41bc1373cd33d8924
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S3_Kidnap.unity
+    guid: a1df0f0eb22153d49ba6561fba9f728b
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S4_Transition.unity
+    guid: 872e2a48272911148a90528f7a102700
+  - enabled: 1
+    path: Assets/Scenes/AI Learning Tool.unity
+    guid: 527208a1cf4a8074a8e80760d7c338b2
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S5_Transition.unity
+    guid: a75819291123b624bb039d727475fdc6
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S6_Spell1.unity
+    guid: 007cd3a82044ba7469bfdcaf041d3da7
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S7_Transition.unity
+    guid: 2a4a7219ccada7d4583d65c80663e883
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S8_Spell2.unity
+    guid: a7bfc10ac89bdb444b3b7fce38bc2914
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S9_Transition.unity
+    guid: 05812f8e7683fdb45bf15d8d13609a74
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S10_Spell3.unity
+    guid: afc9b958fe69b1240b468529c8e7ebab
+  - enabled: 1
+    path: Assets/Scenes/Game Sequence/S11_Transition.unity
+    guid: 227879e83ec8d994b8f3793b39798b0a
   m_configObjects: {}
