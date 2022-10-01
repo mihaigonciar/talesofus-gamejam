@@ -789,6 +789,14 @@ PrefabInstance:
       value: The young boy's fate was put in motion...
       objectReference: {fileID: 0}
     - target: {fileID: 3221564075915271297, guid: b5496a61471e30044a82e91f55d57b50, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2891744be5eeb844cb85d35781f7bb12, type: 2}
+    - target: {fileID: 3221564075915271297, guid: b5496a61471e30044a82e91f55d57b50, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -3251403605470700346, guid: 2891744be5eeb844cb85d35781f7bb12, type: 2}
+    - target: {fileID: 3221564075915271297, guid: b5496a61471e30044a82e91f55d57b50, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}

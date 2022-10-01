@@ -34,6 +34,7 @@ public class S3WellController : MonoBehaviour
 
                 // Hide Helper
                 OnScreenHelper.Instance.DisableHelper();
+                SoundManager.Instance.SetMusic(MusicGenre.Suspenseful);
 
                 CanvasAnimator.SetTrigger("Action");
                 // Go to next scene
