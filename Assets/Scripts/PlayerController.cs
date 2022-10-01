@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public float MovementSpeed = 40f;
     public bool CanBeControlled = true;
 
+    public bool IsMoving = false;
+
     private void Awake()
     {
         _controller = this.GetComponent<CharacterController2D>();
@@ -33,10 +35,12 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalMove != 0f)
         {
+            IsMoving = true;
             _animator.SetBool("IsWalking", true);
         }
         else
         {
+            IsMoving = false;
             _animator.SetBool("IsWalking", false);
         }
     }

@@ -36,6 +36,7 @@ public class S3CanvasController : MonoBehaviour
 
     public void GoToScene()
     {
+        SoundManager.Instance.StopAmbiance();
         Controller.GoToNextScene();
     }
 }

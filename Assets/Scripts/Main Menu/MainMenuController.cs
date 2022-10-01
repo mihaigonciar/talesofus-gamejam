@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    public Animator DiffuseAnimator;
+
     private void Start()
     {
         OnScreenHelper.Instance.DisableHelper();
+        SoundManager.Instance.SetMusic(MusicGenre.Folk);
     }
 
     public Scenes FirstScene = Scenes.S0_Transition;
@@ -15,6 +18,11 @@ public class MainMenuController : MonoBehaviour
     /// Method that starts the game.
     /// </summary>
     public void GoToGameScene()
+    {
+        DiffuseAnimator.SetTrigger("Action");
+    }
+
+    public void GoToScene()
     {
         SceneManager.LoadScene(FirstScene.ToString());
     }
