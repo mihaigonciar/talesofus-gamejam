@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    private void Start()
+    {
+        OnScreenHelper.Instance.DisableHelper();
+    }
+
+    public Scenes FirstScene = Scenes.S0_Transition;
     /// <summary>
     /// Method that starts the game.
     /// </summary>
     public void GoToGameScene()
     {
-        SceneManager.LoadScene(Scenes.S1_Intro.ToString());
+        SceneManager.LoadScene(FirstScene.ToString());
     }
 
     /// <summary>

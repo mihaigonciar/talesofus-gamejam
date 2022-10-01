@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 940029d25710b6c45bd5308d1fe59148
   - enabled: 1
+    path: Assets/Scenes/Game Sequence/S0_Transition.unity
+    guid: 11198bc1f8fdd0740b0d90bd0c09c88a
+  - enabled: 1
     path: Assets/Scenes/Game Sequence/S1_Intro.unity
     guid: a3e8c7faf94df894aa9f78b662c8891f
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Sequence/S4_Transition.unity
     guid: 872e2a48272911148a90528f7a102700
-  - enabled: 1
-    path: Assets/Scenes/AI Learning Tool.unity
-    guid: 527208a1cf4a8074a8e80760d7c338b2
   - enabled: 1
     path: Assets/Scenes/Game Sequence/S5_Transition.unity
     guid: a75819291123b624bb039d727475fdc6
@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Sequence/S11_Transition.unity
     guid: 227879e83ec8d994b8f3793b39798b0a
+  - enabled: 1
+    path: Assets/Scenes/AI Learning Tool.unity
+    guid: 527208a1cf4a8074a8e80760d7c338b2
   m_configObjects: {}
