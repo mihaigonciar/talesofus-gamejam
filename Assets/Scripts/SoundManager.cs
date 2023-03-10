@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip VillageAmbiance;
     public AudioClip CaveAmbiance;
     public AudioClip ForrestAmbiance;
+    public AudioClip BabyAmbiance;
 
     public AudioClip FolkMusic;
     public AudioClip SuspensefulMusic;
@@ -51,6 +52,11 @@ public class SoundManager : MonoBehaviour
             case Ambiance.Forrest:
                 {
                     clip = ForrestAmbiance;
+                    break;
+                }
+            case Ambiance.Baby:
+                {
+                    clip = BabyAmbiance;
                     break;
                 }
         }
@@ -123,7 +129,8 @@ public enum Ambiance
 {
     Village,
     Forrest,
-    Cave
+    Cave,
+    Baby
 }
 
 public enum MusicGenre

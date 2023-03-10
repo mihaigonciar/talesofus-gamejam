@@ -29,9 +29,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (CanBeControlled == false) return;
-
-        horizontalMove = Input.GetAxisRaw("Horizontal") * MovementSpeed;
+        if (CanBeControlled == true)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal") * MovementSpeed;
+        }
+        else
+        {
+            horizontalMove = 0f;
+        }
 
         if (horizontalMove != 0f)
         {

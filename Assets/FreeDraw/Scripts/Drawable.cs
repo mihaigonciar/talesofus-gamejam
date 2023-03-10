@@ -55,6 +55,7 @@ namespace FreeDraw
         bool mouse_was_previously_held_down = false;
         bool no_drawing_on_current_drag = false;
 
+        public bool IsGameMode = false;
 
         //////////////////////////////////////////////////////////////////////////////
         // BRUSH TYPES. Implement your own here
@@ -188,22 +189,38 @@ namespace FreeDraw
                 no_drawing_on_current_drag = false;
             }
 
-            if (Input.GetMouseButtonUp(0) && InRange())
+            if (IsGameMode)
             {
-                _strokeIndex++;
+                if (Input.GetMouseButtonUp(0)/* && InRange()*/)
+                {
+                    _strokeIndex++;
+                    FinishDrawing();
+                }
+            }
+            else
+            {
+                if (Input.GetMouseButtonUp(0) && InRange())
+                {
+                    _strokeIndex++;
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                OnDrawFinished?.Invoke(_drawPoints.ToArray());
-                previous_drag_position = Vector2.zero;
-                no_drawing_on_current_drag = false;
-                ResetCanvas(drawable_texture);
-                Debug.Log(_strokeIndex);
-                _strokeIndex = 0;
+                FinishDrawing();
             }
 
             mouse_was_previously_held_down = mouse_held_down;
+        }
+
+        private void FinishDrawing()
+        {
+            OnDrawFinished?.Invoke(_drawPoints.ToArray());
+            previous_drag_position = Vector2.zero;
+            no_drawing_on_current_drag = false;
+            ResetCanvas(drawable_texture);
+            Debug.Log(_strokeIndex);
+            _strokeIndex = 0;
         }
 
         private bool InRange()

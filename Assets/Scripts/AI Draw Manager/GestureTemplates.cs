@@ -42,14 +42,16 @@ public class GestureTemplates
 
     public void Save()
     {
-        string path = Application.persistentDataPath + "/SavedTemplates.json";
+        //string path = Application.persistentDataPath + "/SavedTemplates.json";
+        string path = Application.dataPath + "/SavedTemplates.json";
         string potion = JsonUtility.ToJson(this);
         File.WriteAllText(path, potion);
     }
 
     private void Load()
     {
-        string path = Application.persistentDataPath + "/SavedTemplates.json";
+        //string path = Application.persistentDataPath + "/SavedTemplates.json";
+        string path = Application.dataPath + "/SavedTemplates.json";
         if (File.Exists(path))
         {
             GestureTemplates data = JsonUtility.FromJson<GestureTemplates>(File.ReadAllText(path));

@@ -12,6 +12,6 @@ public class TransitionTexts : ScriptableObject
     public string Transition_S7_Text = "He had to learn about Evil...";
     public string Transition_S9_Text = "And ultimately he had to learn Balance...";
     public string Transition_S11_Text = "...before finally being tested.";
-
+    public string Transition_S13_Text = "... and become a Solomonari!";
 
 }

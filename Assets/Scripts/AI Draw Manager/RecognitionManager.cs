@@ -22,6 +22,9 @@ public class RecognitionManager : MonoBehaviour
     private IRecognizer _currentRecognizer = _dollarOneRecognizer;
     private RecognizerState _state = RecognizerState.RECOGNITION;
 
+    public bool GameMode = false;
+    public ActivityController Controller;
+
     public enum RecognizerState
     {
         TEMPLATE,
@@ -100,17 +103,33 @@ public class RecognitionManager : MonoBehaviour
             string resultText = "";
             if (_currentRecognizer is DollarOneRecognizer)
             {
-                resultText = $"Recognized: {result.Item1}, Score: {result.Item2}";
+                if (GameMode)
+                {
+                    Controller.ProcessSpell(result.Item1, result.Item2);
+                }
+                else
+                {
+                    resultText = $"Recognized: {result.Item1}, Score: {result.Item2}";
+                }
             }
             else if (_currentRecognizer is DollarPRecognizer)
             {
-                resultText = $"Recognized: {result.Item1}, Distance: {result.Item2}";
+                if (GameMode)
+                {
+                    Controller.ProcessSpell(result.Item1, result.Item2);
+                }
+                else
+                {
+                    resultText = $"Recognized: {result.Item1}, Distance: {result.Item2}";
+                }
             }
 
             _recognitionResult.text = resultText;
             Debug.Log(resultText);
         }
     }
+
+
 
     private void OnApplicationQuit()
     {
