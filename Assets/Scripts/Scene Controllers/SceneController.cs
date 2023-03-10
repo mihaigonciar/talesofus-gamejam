@@ -61,6 +61,11 @@ public class SceneController : MonoBehaviour
                         text.text = PromptSource.Transition_S11_Text;
                         break;
                     }
+                case nameof(Scenes.S13_Transition):
+                    {
+                        text.text = PromptSource.Transition_S13_Text;
+                        break;
+                    }
             }
         }
     }
@@ -86,4 +91,6 @@ public enum Scenes
     S10_Spell3,
     S11_Transition,
     S0_Transition,
+    S12_Outro,
+    S13_Transition
 }
